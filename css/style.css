@@ -39,15 +39,15 @@ nav li {
 }
 
 .small-container{
-    width: 39em;
-    height: 37em;
+    width: 70%;
+    height: 100%;
     
     background-color: orangered;
 }
 
 .meteo-container{
-    width: 20em;
-    height: 37em;
+    width: 30%;
+    height: 100%;
     background-color: blue;
    
 }
