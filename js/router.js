@@ -1,27 +1,26 @@
 const fileHandler = require('./fileHandler.js');
-const fs = require('fs');
+const fileHandle = new fileHandler();
 
 console.log("DOM fully loaded and parsed");
 module.exports = {
-    routeRequest(req, res) {
-        console.log('Received request:', req.url);
-        fs.readFile("./assets/content/index.html", 'utf8', (err, data) => {
-            if (err) {
-                console.error(err);
-                return;
-            }
-            res.writeHead(200, {'Content-Type': 'text/html'});
-            res.write(data);
-            res.end();
-        });
+    async routeRequest(req, res) {
+        if(this.isImageRequest(req))
+            await fileHandle.sendImage(req, res);
+        else if(this.isCssRequest(req))
+            await fileHandle.sendCss(req, res);
+        else
+            await fileHandle.sendHtml(req, res);
     },
-    //.listen(8080);
 
     isImageRequest(url) {
-        return true;
+        if(url.includes("png"))
+            return true;
+        return false;
     },
 
     isCssRequest(url) {
-        return true;
-    }
+        if(url.includes("css"))
+            return true;
+        return false;
+    },
 }
