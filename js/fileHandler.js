@@ -26,14 +26,13 @@ module.exports = class FileHandler {
     sendHtml(fichier, res) {
         fichier = "./assets/content/" + fichier;
         console.log('Received HTML request:', fichier);
-        console.log("zzzzzzzz" + this.getContentTypeByExtension(fichier));
 
         fs.readFile(fichier, (err, data) => {
             if (err) {
                 console.error(err);
                 return;
             }
-            res.writeHead(200, {'Content-Type': this.getContentTypeByExtension(fichier)});
+            res.writeHead(200, "utf-8", {'Content-Type': this.getContentTypeByExtension(fichier)});
             res.end(data);
         });
     };
@@ -45,7 +44,7 @@ module.exports = class FileHandler {
                 console.error(err);
                 return;
             }
-            res.writeHead(200, {'Content-Type': 'text/img'});
+            res.writeHead(200, "utf-8", {'Content-Type': 'image/png'});
             res.write(data);
             res.end();
         });
@@ -58,7 +57,7 @@ module.exports = class FileHandler {
                 console.error(err);
                 return;
             }
-            res.writeHead(200, {'Content-Type': 'text/css'});
+            res.writeHead(200, "utf-8", {'Content-Type': 'text/css'});
             res.write(data);
             res.end();
         });
