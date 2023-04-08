@@ -3,7 +3,6 @@ const WEATHER = "https://api.openweathermap.org/data/2.5/weather?q=Montreal&appi
 const headerItems = $("ul li");
 
 $(document).ready(function () {
-    $(".small-container").append("<p>ZZZZZZZZZZZZZZZZZz</p>");
     fetchData(WEATHER)
     .then(data => loadWeather(data));
 
@@ -29,7 +28,7 @@ function insertContent(hyperlink) {
 
 function loadWeather(data) {
     const sidebar = $("div.content");
-
+    
     sidebar.find(".Ville").text(data.name);
     sidebar.find(".date").text(new Date(data.dt * 1000).toLocaleDateString());
     sidebar.find(".Temperature").text(`${data.main.temp}` + " °C");

@@ -25,13 +25,13 @@ h1, h2, h3, h4, h5, h6
 
 h2
 { font: normal 175% 'century gothic', arial, sans-serif;
-  color: #1293EE;}
+  color: rgb(40, 40, 40);}
 
 h4, h5, h6
 { margin: 0;
   padding: 0 0 5px 0;
   font: normal 120% arial, sans-serif;
-  color: #1293EE;}
+  color: rgb(40, 40, 40);}
 
 h5, h6
 { font: italic 95% arial, sans-serif;
@@ -115,7 +115,7 @@ ol li
   text-decoration: none;}
 
 #logo_text h1 a .logo_colour
-{ color: #1293EE;}
+{ color: rgb(40, 40, 40);}
 
 #logo_text h2
 { font-size: 100%;
@@ -126,7 +126,7 @@ ol li
 { width: 900px;
   height: 72px;
   padding: 0;
-  background: #1293EE;} 
+  background: rgb(40, 40, 40);} 
 
 ul#menu, ul#menu li
 { float: left;
@@ -212,7 +212,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   height: 33px;
   padding: 24px 0 5px 0;
   text-align: center; 
-  background: #1293EE;
+  background: rgb(40, 40, 40);
   color: #FFF;
   text-transform: uppercase;
   letter-spacing: 0.1em;}
@@ -264,7 +264,7 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
   height: 33px;
   padding: 2px 0 3px 0;
   cursor: pointer; 
-  background: #1293EE; 
+  background: rgb(40, 40, 40); 
   color: #FFF;}
 
 .form_settings textarea, .form_settings select
