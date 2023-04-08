@@ -163,7 +163,15 @@ ul#menu li a:hover, ul#menu li.selected a, ul#menu li.selected a:hover
 .sidebar
 { float: right;
   width: 190px;
-  padding: 0 15px 20px 15px;}
+  padding: 0 15px 20px 15px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
 
 .sidebar ul
 { width: 178px; 

@@ -3,10 +3,13 @@
 
 <head>
   <title>Projet 3</title>
-  <meta name="description" content="website description" />
-  <meta name="keywords" content="website keywords, website keywords" />
-  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
-  <link rel="stylesheet" type="text/css" href="/css/style/style.css" title="style" />
+  <link rel="stylesheet" type="text/css" href="/css/style/style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/brewingCoffee.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./menu.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,35 +34,47 @@
       </div>
     </div>
     <div id="site_content">
-      <div class="sidebar">
-        <!-- insert your sidebar items here -->
-        <div>
-          <div id="Popup" class="meteo">
+      <div class="container">
+        <div class="small-container">
+
+        </div>
+        <div class="sidebar">
+          <!-- insert your sidebar items here -->
+          <div>
+            <div id="Popup" class="meteo">
+            </div>
+          </div>
+
+          <div class="content">
+            <h1 class="meteo-word">Meteo</h3>
+              <p class="Ville">
+                </h4>
+              <p class="Temperature">
+                </h5>
+              <p class="date">2023/03/21</p>
+              <img src="" alt="" class="image"></img>
+
+              <h3>Recherche</h3>
+              <form method="post" action="#" id="search_form">
+                <p>
+                  <input class="search" type="text" name="search_field" placeholder="Recherche" />
+                  <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png"
+                    alt="Search" title="Search" />
+                </p>
+              </form>
+          </div>
+
+          <div id="content">
+
           </div>
         </div>
-        <p>Meteo</p>
-        <p class="Ville">Montreal</p>
-        <p class="Temperature"></p>
-        <img class="image" src="" alt="">
-
-        <h3>Recherche</h3>
-        <form method="post" action="#" id="search_form">
-          <p>
-            <input class="search" type="text" name="search_field" placeholder="Recherche" />
-            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png"
-              alt="Search" title="Search" />
-          </p>
-        </form>
-      </div>
-      <div class="small-container" id="content">
-
       </div>
     </div>
     <div id="footer">
       Copyright &copy; Richard Gajda et Javen Vernet
     </div>
-  </div>
-  <script src="js"></script>
+
+
 </body>
 
 </html>
