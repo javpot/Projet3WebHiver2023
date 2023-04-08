@@ -7,29 +7,25 @@ $(document).ready(function () {
     fetchData(WEATHER)
     .then(data => loadWeather(data));
 
-    console.log(headerItems.contents());
+    insertContent($('ul li a'));
 
-    headerItems.each(function(i) {
-        console.log(i);
-        setOnClick($(this));
+    $('ul li').each(function() {
+        $(this).click(function(event) {
+            event.preventDefault();
+            insertContent($(this).find('a'));
+        });
     });
 });
 
-function setOnClick(element) {
-    console.log(element.find("a"));
-    element.click(function(event) {
-        event.preventDefault(); 
-        console.log(element.find('a'));
-        insertContent(element.find('a'));
-    });
-}
+//TEXT STUFF
 
 function insertContent(hyperlink) {
-    console.log(hyperlink);
     $.get(hyperlink.attr('href'), function(data) {
         $('.small-container').empty().append(data);
     });
 }
+
+//WEATHER STUFF
 
 function loadWeather(data) {
     const sidebar = $('div.content');
